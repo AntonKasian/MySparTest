@@ -13,6 +13,7 @@
 		3A4AD3D92A8A3547002BBEF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4AD3D82A8A3547002BBEF9 /* Preview Assets.xcassets */; };
 		3A911F5C2A8A40DF00896EFB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A911F5B2A8A40DF00896EFB /* MainViewModel.swift */; };
 		3A911F612A8A482C00896EFB /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A911F602A8A482C00896EFB /* TabBarView.swift */; };
+		3A911F652A8A52B600896EFB /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A911F642A8A52B600896EFB /* StoryCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		3A4AD3D82A8A3547002BBEF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A911F5B2A8A40DF00896EFB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		3A911F602A8A482C00896EFB /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		3A911F642A8A52B600896EFB /* StoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4AD3D32A8A3545002BBEF9 /* MainView.swift */,
+				3A911F642A8A52B600896EFB /* StoryCardView.swift */,
 				3A911F602A8A482C00896EFB /* TabBarView.swift */,
 			);
 			path = View;
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A911F612A8A482C00896EFB /* TabBarView.swift in Sources */,
+				3A911F652A8A52B600896EFB /* StoryCardView.swift in Sources */,
 				3A4AD3D42A8A3545002BBEF9 /* MainView.swift in Sources */,
 				3A4AD3D22A8A3545002BBEF9 /* MySparApp.swift in Sources */,
 				3A911F5C2A8A40DF00896EFB /* MainViewModel.swift in Sources */,

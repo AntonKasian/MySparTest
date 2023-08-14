@@ -14,7 +14,17 @@ struct MainView: View {
     var body: some View {
         VStack {
             searchBar
-            
+            Divider()
+                .padding()
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 10) {
+                    ForEach(0..<10) {_ in
+                        StoryCardView()
+                    }
+                }
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+            }
         }
     }
     
@@ -25,7 +35,7 @@ struct MainView: View {
                     .stroke(Color.gray, lineWidth: 1)
                 HStack {
                     Image(systemName: "mappin")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.red)
                         .padding(.leading, 10)
                     TextField("Search", text: $searchText)
                         .padding(.vertical, 10)
