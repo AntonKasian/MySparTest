@@ -11,6 +11,9 @@
 		3A4AD3D42A8A3545002BBEF9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AD3D32A8A3545002BBEF9 /* MainView.swift */; };
 		3A4AD3D62A8A3547002BBEF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4AD3D52A8A3547002BBEF9 /* Assets.xcassets */; };
 		3A4AD3D92A8A3547002BBEF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4AD3D82A8A3547002BBEF9 /* Preview Assets.xcassets */; };
+		3A57B0342A8B5694005DBD22 /* DiscountCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57B0332A8B5694005DBD22 /* DiscountCards.swift */; };
+		3A57B0372A8B591C005DBD22 /* BonusCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57B0362A8B591C005DBD22 /* BonusCards.swift */; };
+		3A57B0392A8B5AAF005DBD22 /* NavigationCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57B0382A8B5AAF005DBD22 /* NavigationCards.swift */; };
 		3A911F5C2A8A40DF00896EFB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A911F5B2A8A40DF00896EFB /* MainViewModel.swift */; };
 		3A911F612A8A482C00896EFB /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A911F602A8A482C00896EFB /* TabBarView.swift */; };
 		3A911F652A8A52B600896EFB /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A911F642A8A52B600896EFB /* StoryCardView.swift */; };
@@ -22,6 +25,9 @@
 		3A4AD3D32A8A3545002BBEF9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3A4AD3D52A8A3547002BBEF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4AD3D82A8A3547002BBEF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A57B0332A8B5694005DBD22 /* DiscountCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCards.swift; sourceTree = "<group>"; };
+		3A57B0362A8B591C005DBD22 /* BonusCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusCards.swift; sourceTree = "<group>"; };
+		3A57B0382A8B5AAF005DBD22 /* NavigationCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCards.swift; sourceTree = "<group>"; };
 		3A911F5B2A8A40DF00896EFB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		3A911F602A8A482C00896EFB /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		3A911F642A8A52B600896EFB /* StoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
@@ -74,12 +80,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3A57B0352A8B5909005DBD22 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				3A911F642A8A52B600896EFB /* StoryCardView.swift */,
+				3A57B0332A8B5694005DBD22 /* DiscountCards.swift */,
+				3A57B0362A8B591C005DBD22 /* BonusCards.swift */,
+				3A57B0382A8B5AAF005DBD22 /* NavigationCards.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 		3A911F5A2A8A40A500896EFB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3A4AD3D32A8A3545002BBEF9 /* MainView.swift */,
-				3A911F642A8A52B600896EFB /* StoryCardView.swift */,
 				3A911F602A8A482C00896EFB /* TabBarView.swift */,
+				3A4AD3D32A8A3545002BBEF9 /* MainView.swift */,
+				3A57B0352A8B5909005DBD22 /* Cards */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A57B0342A8B5694005DBD22 /* DiscountCards.swift in Sources */,
 				3A911F612A8A482C00896EFB /* TabBarView.swift in Sources */,
 				3A911F652A8A52B600896EFB /* StoryCardView.swift in Sources */,
 				3A4AD3D42A8A3545002BBEF9 /* MainView.swift in Sources */,
+				3A57B0372A8B591C005DBD22 /* BonusCards.swift in Sources */,
+				3A57B0392A8B5AAF005DBD22 /* NavigationCards.swift in Sources */,
 				3A4AD3D22A8A3545002BBEF9 /* MySparApp.swift in Sources */,
 				3A911F5C2A8A40DF00896EFB /* MainViewModel.swift in Sources */,
 			);

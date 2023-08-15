@@ -38,7 +38,7 @@ struct TabBarView: View {
                 MainView()
                     .tabItem {
                         Image(systemName: "person")
-                        Text("Profile")
+                        Text("Профиль")
                     }
                 
             }

@@ -25,6 +25,28 @@ struct MainView: View {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
             }
+            ScrollView(.vertical, showsIndicators: false) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        ForEach(0..<10) {_ in
+                            DiscountCards()
+                        }
+                    }
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 5)
+                BonusCards()
+                    .padding(.bottom, 10)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        ForEach(0..<10) {_ in
+                            NavigationCards()
+                        }
+                    }
+                }
+                .padding(.horizontal, 20)
+            }
+
         }
     }
     
