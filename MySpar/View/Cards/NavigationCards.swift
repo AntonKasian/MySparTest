@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NavigationCards: View {
+    
+    var title: String
+    
     var body: some View {
         Button {
             print("Navigation pressed")
@@ -18,7 +21,7 @@ struct NavigationCards: View {
                     .foregroundColor(Color(.systemGray5))
                 
                 VStack(alignment: .leading) {
-                    Text("Абонемент на кофе")
+                    Text(title)
                         .foregroundColor(.black)
                         .font(.system(size: 18))
                         .multilineTextAlignment(.leading)
@@ -34,6 +37,6 @@ struct NavigationCards: View {
 
 struct NavigationCards_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationCards()
+        NavigationCards(title: "Абонемент на кофе")
     }
 }

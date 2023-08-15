@@ -11,6 +11,22 @@ struct MainView: View {
     
     @State var searchText = ""
     
+    let storiesTitles = [
+            "Привелегии «Мой SPAR»",
+            "Мы в соцсетях",
+            "Дегустация в SPAR",
+            "3 рецепта коктейлей",
+            "Новинки недели"
+        ]
+    
+    let navigationTitles = [
+        "Абонемент на кофе",
+        "Мои скидки",
+        "Карта в подарок",
+        "Доставка за один час",
+        "Бесплатная доставка"
+    ]
+    
     var body: some View {
         VStack {
             searchBar
@@ -19,8 +35,8 @@ struct MainView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
-                        ForEach(0..<10) {_ in
-                            StoryCardView()
+                        ForEach(storiesTitles, id: \.self) {title in
+                            StoryCardView(title: title)
                         }
                     }
                     .padding(.horizontal, 10)
@@ -31,7 +47,6 @@ struct MainView: View {
                     HStack(spacing: 10) {
                         ForEach(0..<10) {_ in
                             DiscountCards()
-                                .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
                 }
@@ -41,9 +56,8 @@ struct MainView: View {
                     .padding(.bottom, 10)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
-                        ForEach(0..<10) {_ in
-                            NavigationCards()
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                        ForEach(navigationTitles, id: \.self) {title in
+                            NavigationCards(title: title)
                         }
                     }
                 }
@@ -95,7 +109,9 @@ struct MainView: View {
                         .resizable()
                         .frame(width: 20, height: 20)
                         .padding(.leading, 10)
-                    TextField("Search", text: $searchText)
+                    TextField("Москва, Москва и Московская область", text: $searchText)
+                        .font(.system(size: 14))
+                        .foregroundColor(.black)
                         .padding(.vertical, 10)
                         .padding(.leading, 8)
                 }

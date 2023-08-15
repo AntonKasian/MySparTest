@@ -11,6 +11,7 @@ struct RecomendCards: View {
     
     @State private var discountIsVisible = false
     
+    
     var body: some View {
         Button {
             print("Recommend pressed")
@@ -26,25 +27,24 @@ struct RecomendCards: View {
                     .frame(width: 110, height: 10, alignment: .leading)
                     .padding(.leading, 20)
                     .background(
-                        RoundedRectangle(cornerRadius: 20)
+                        CurvedShape(color: .red, topLeftRadius: 100, topRightRadius: 5, bottomLeftRadius: 0, bottomRightRadius: 5)
                             .frame(width: 110,height: 20)
-                            .foregroundColor(.red.opacity(0.4))
                     )
-                    .padding(.bottom, 209)
-                    .padding(.trailing, 50)
+                    .padding(.bottom, 210)
+                    .padding(.trailing, 60)
                 Spacer()
                 
                 VStack(alignment: .leading) {
                     Image("cheese")
                         .resizable()
                         .frame(width: 130, height: 130, alignment: .center)
+                        .padding(.top)
                         .padding(.horizontal)
                     Spacer()
                     HStack {
                         VStack {
                             Text("259.90 р/шт")
                                 .foregroundColor(.black)
-                                .frame(maxWidth: .infinity, alignment: .leading)
                             if discountIsVisible {
                                 Text("390.90 р/шт")
                                     .foregroundColor(.gray)
@@ -83,6 +83,8 @@ struct RecomendCards: View {
         .shadow(radius: 5)
     }
 }
+
+
 
 struct RecomendCards_Previews: PreviewProvider {
     static var previews: some View {

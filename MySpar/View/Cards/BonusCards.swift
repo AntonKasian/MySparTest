@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct BonusCards: View {
+    
+    @State var bonus = 0
+    
     var body: some View {
             Button {
                 print("Bonus pressed")
+                bonus += 50
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
@@ -18,7 +22,7 @@ struct BonusCards: View {
                         .foregroundColor(Color(.systemGray5))
                     
                     HStack(alignment: .top) {
-                        Text("0")
+                        Text("\(bonus)")
                             .font(.system(size: 40).bold())
                             .foregroundColor(.black)
                         Text("бонусов")

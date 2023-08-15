@@ -16,6 +16,7 @@
 		3A57B0392A8B5AAF005DBD22 /* NavigationCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57B0382A8B5AAF005DBD22 /* NavigationCards.swift */; };
 		3A57B03B2A8B809A005DBD22 /* RecomendCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57B03A2A8B8099005DBD22 /* RecomendCards.swift */; };
 		3A64D2242A8B8EE100972D14 /* SweetCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64D2232A8B8EE100972D14 /* SweetCards.swift */; };
+		3A64D2262A8BBE0A00972D14 /* CurvedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64D2252A8BBE0A00972D14 /* CurvedShape.swift */; };
 		3A911F5C2A8A40DF00896EFB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A911F5B2A8A40DF00896EFB /* MainViewModel.swift */; };
 		3A911F612A8A482C00896EFB /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A911F602A8A482C00896EFB /* TabBarView.swift */; };
 		3A911F652A8A52B600896EFB /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A911F642A8A52B600896EFB /* StoryCardView.swift */; };
@@ -32,6 +33,7 @@
 		3A57B0382A8B5AAF005DBD22 /* NavigationCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCards.swift; sourceTree = "<group>"; };
 		3A57B03A2A8B8099005DBD22 /* RecomendCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendCards.swift; sourceTree = "<group>"; };
 		3A64D2232A8B8EE100972D14 /* SweetCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetCards.swift; sourceTree = "<group>"; };
+		3A64D2252A8BBE0A00972D14 /* CurvedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedShape.swift; sourceTree = "<group>"; };
 		3A911F5B2A8A40DF00896EFB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		3A911F602A8A482C00896EFB /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		3A911F642A8A52B600896EFB /* StoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				3A911F602A8A482C00896EFB /* TabBarView.swift */,
 				3A4AD3D32A8A3545002BBEF9 /* MainView.swift */,
+				3A64D2252A8BBE0A00972D14 /* CurvedShape.swift */,
 				3A57B0352A8B5909005DBD22 /* Cards */,
 			);
 			path = View;
@@ -195,6 +198,7 @@
 				3A57B0392A8B5AAF005DBD22 /* NavigationCards.swift in Sources */,
 				3A4AD3D22A8A3545002BBEF9 /* MySparApp.swift in Sources */,
 				3A911F5C2A8A40DF00896EFB /* MainViewModel.swift in Sources */,
+				3A64D2262A8BBE0A00972D14 /* CurvedShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
