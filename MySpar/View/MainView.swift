@@ -64,6 +64,23 @@ struct MainView: View {
                     }
                     .padding(.horizontal, 20)
                 }
+                
+                Text("Сладкое настроение")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical)
+                    .font(.system(size: 25).bold())
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        ForEach(0..<10) {_ in
+                            SweetCards()
+                                .padding(.vertical, 5)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                }
+                .padding(.bottom)
             }
         }
     }
@@ -74,8 +91,9 @@ struct MainView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.gray, lineWidth: 1)
                 HStack {
-                    Image(systemName: "mappin")
-                        .foregroundColor(.red)
+                    Image("pin")
+                        .resizable()
+                        .frame(width: 20, height: 20)
                         .padding(.leading, 10)
                     TextField("Search", text: $searchText)
                         .padding(.vertical, 10)

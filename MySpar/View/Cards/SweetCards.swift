@@ -1,5 +1,5 @@
 //
-//  RecomendCards.swift
+//  SweetCards.swift
 //  MySpar
 //
 //  Created by Anton on 15.08.23.
@@ -7,35 +7,21 @@
 
 import SwiftUI
 
-struct RecomendCards: View {
+struct SweetCards: View {
     
     @State private var discountIsVisible = false
     
     var body: some View {
         Button {
-            print("Recommend pressed")
+            print("Sweet pressed")
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .frame(width: 170, height: 230)
                     .foregroundColor(Color(.white))
                 
-                Text("Удар по ценам")
-                    .foregroundColor(.white)
-                    .font(.system(size: 12))
-                    .frame(width: 110, height: 10, alignment: .leading)
-                    .padding(.leading, 20)
-                    .background(
-                        RoundedRectangle(cornerRadius: 20)
-                            .frame(width: 110,height: 20)
-                            .foregroundColor(.red.opacity(0.4))
-                    )
-                    .padding(.bottom, 209)
-                    .padding(.trailing, 50)
-                Spacer()
-                
                 VStack(alignment: .leading) {
-                    Image("cheese")
+                    Image("cake")
                         .resizable()
                         .frame(width: 130, height: 130, alignment: .center)
                         .padding(.horizontal)
@@ -78,14 +64,15 @@ struct RecomendCards: View {
                     .padding(.top)
                 }
                 .frame(width: 160, height: 190)
+                //.background(Color.red.opacity(0.2))
             }
         }
         .shadow(radius: 5)
     }
 }
 
-struct RecomendCards_Previews: PreviewProvider {
+struct SweetCards_Previews: PreviewProvider {
     static var previews: some View {
-        RecomendCards()
+        SweetCards()
     }
 }
