@@ -10,7 +10,7 @@ import SwiftUI
 struct NavigationCards: View {
     var body: some View {
         Button {
-            print("Bonus pressed")
+            print("Navigation pressed")
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)

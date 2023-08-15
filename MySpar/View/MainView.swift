@@ -16,20 +16,22 @@ struct MainView: View {
             searchBar
             Divider()
                 .padding()
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 10) {
-                    ForEach(0..<10) {_ in
-                        StoryCardView()
-                    }
-                }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 5)
-            }
             ScrollView(.vertical, showsIndicators: false) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(0..<10) {_ in
+                            StoryCardView()
+                        }
+                    }
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                }
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        ForEach(0..<10) {_ in
                             DiscountCards()
+                                .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
                 }
@@ -41,12 +43,28 @@ struct MainView: View {
                     HStack(spacing: 10) {
                         ForEach(0..<10) {_ in
                             NavigationCards()
+                                .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
                 }
                 .padding(.horizontal, 20)
+                
+                Text("Рекомендуем")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical)
+                    .font(.system(size: 25).bold())
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        ForEach(0..<10) {_ in
+                            RecomendCards()
+                                .padding(.vertical, 5)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                }
             }
-
         }
     }
     
