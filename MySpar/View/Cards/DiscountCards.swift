@@ -12,9 +12,12 @@ struct DiscountCards: View {
             Button {
                 print("Discount pressed")
             } label: {
-                RoundedRectangle(cornerRadius: 20)
+                // К сожалению я не смог найти картинку нужных размеров
+                Image("DiscountImage")
+                    .resizable()
+                    .scaledToFill()
                     .frame(width: 330, height: 170)
-                    .foregroundColor(Color(.systemGray5))
+                    .cornerRadius(20)
             }
         
     }

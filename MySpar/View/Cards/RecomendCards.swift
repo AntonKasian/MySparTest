@@ -11,44 +11,45 @@ struct RecomendCards: View {
     
     @State private var discountIsVisible = false
     
-    
     var body: some View {
         Button {
-            print("Recommend pressed")
+            print("Reccomend pressed")
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .frame(width: 170, height: 230)
                     .foregroundColor(Color(.white))
                 
-                Text("Удар по ценам")
-                    .foregroundColor(.white)
-                    .font(.system(size: 12))
-                    .frame(width: 110, height: 10, alignment: .leading)
-                    .padding(.leading, 20)
-                    .background(
-                        CurvedShape(color: .red, topLeftRadius: 100, topRightRadius: 5, bottomLeftRadius: 0, bottomRightRadius: 5)
-                            .frame(width: 110,height: 20)
+                    .overlay(
+                        ZStack() {
+                            CurvedShape(color: .red, topLeftRadius: 100, topRightRadius: 5, bottomLeftRadius: 0, bottomRightRadius: 5)
+                                .frame(width: 110, height: 20)
+                            Text("Удар по ценам")
+                                .foregroundColor(.white)
+                                .font(.system(size: 12))
+                                .frame(width: 110, height: 20)
+                        }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+                            .padding(.bottom, 210)
+                            .padding(.trailing, 60)
                     )
-                    .padding(.bottom, 210)
-                    .padding(.trailing, 60)
-                Spacer()
+            
+                    Spacer()
                 
                 VStack(alignment: .leading) {
                     Image("cheese")
                         .resizable()
                         .frame(width: 130, height: 130, alignment: .center)
-                        .padding(.top)
                         .padding(.horizontal)
                     Spacer()
                     HStack {
                         VStack {
                             Text("259.90 р/шт")
                                 .foregroundColor(.black)
+                                .font(.system(size: 16).bold())
                             if discountIsVisible {
                                 Text("390.90 р/шт")
                                     .foregroundColor(.gray)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
                                     .overlay(
                                         GeometryReader { proxy in
                                             Rectangle()

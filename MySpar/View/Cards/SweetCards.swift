@@ -30,11 +30,10 @@ struct SweetCards: View {
                         VStack {
                             Text("259.90 р/шт")
                                 .foregroundColor(.black)
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .font(.system(size: 16).bold())
                             if discountIsVisible {
                                 Text("390.90 р/шт")
                                     .foregroundColor(.gray)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
                                     .overlay(
                                         GeometryReader { proxy in
                                             Rectangle()
@@ -64,7 +63,6 @@ struct SweetCards: View {
                     .padding(.top)
                 }
                 .frame(width: 160, height: 190)
-                //.background(Color.red.opacity(0.2))
             }
         }
         .shadow(radius: 5)
