@@ -15,34 +15,32 @@ struct TabBarView: View {
     
     var body: some View {
         
-            TabView {
-                MainView()
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("Главная")
-                    }
-                
-                MainView()
-                    .tabItem {
-                        Image(systemName: "square.on.square")
-                        Text("Каталог")
-                    }
-                
-                MainView()
-                    .tabItem {
-                        Image(systemName: "basket")
-                        Text("Корзина")
-                    }
-                    
-                
-                MainView()
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text("Профиль")
-                    }
-                
-            }
-            .accentColor(.green)
+        TabView {
+            MainView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Главная")
+                }
+            
+            Text("Каталог")
+                .tabItem {
+                    Image(systemName: "square.on.square")
+                    Text("Каталог")
+                }
+            
+            Text("Корзина")
+                .tabItem {
+                    Image(systemName: "basket")
+                    Text("Корзина")
+                }
+            
+            Text("Профиль")
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Профиль")
+                }
+        }
+        .accentColor(.green)
     }
 }
 

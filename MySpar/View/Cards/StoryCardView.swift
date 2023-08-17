@@ -48,7 +48,6 @@ struct StoryCardView: View {
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
         }
-        
     }
 }
 

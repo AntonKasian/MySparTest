@@ -11,14 +11,18 @@ struct MainView: View {
     
     @ObservedObject var viewModel = MainViewModel()
     
-    @State var searchText = ""
-    
     var body: some View {
         VStack {
+            
+            // MARK: - Search Bar
+            
             searchBar
             Divider()
-                .padding()
+                .padding(.top, 8)
             ScrollView(.vertical, showsIndicators: false) {
+                
+                // MARK: - Story cards
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(viewModel.storiesTitles, id: \.self) {title in
@@ -29,6 +33,8 @@ struct MainView: View {
                     .padding(.vertical, 5)
                 }
                 
+                // MARK: - Discount cards
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(0..<10) {_ in
@@ -38,8 +44,14 @@ struct MainView: View {
                 }
                 .padding(.horizontal)
                 .padding(.vertical, 5)
+                
+                // MARK: - Bonus card
+                
                 BonusCards()
                     .padding(.bottom, 10)
+                
+                // MARK: - Navigation cards
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(viewModel.navigationTitles, id: \.self) {title in
@@ -49,11 +61,15 @@ struct MainView: View {
                 }
                 .padding(.horizontal, 20)
                 
+                // MARK: - Recommend text
+                
                 Text("Рекомендуем")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
                     .padding(.vertical)
                     .font(.system(size: 25).bold())
+                
+                // MARK: - Recommend cards
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
@@ -65,11 +81,15 @@ struct MainView: View {
                     .padding(.horizontal, 20)
                 }
                 
+                // MARK: - Sweet text
+                
                 Text("Сладкое настроение")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
                     .padding(.vertical)
                     .font(.system(size: 25).bold())
+                
+                // MARK: - Sweet cards
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
@@ -100,9 +120,6 @@ struct MainView: View {
                             .padding(.leading, 10)
                     }
                     
-                    // Тут я не совсем понял, должен ли тут быть Text или TextField
-                    
-                    // TextField("Москва, Москва и Московская область", text: $searchText)
                     Text("Москва, Москва и Московская область")
                         .font(.system(size: 14))
                         .foregroundColor(.black)
@@ -118,10 +135,9 @@ struct MainView: View {
             } label: {
                 Image(systemName: "line.3.horizontal")
             }
-            .padding(.trailing, 10)
+            .padding(.trailing, 20)
             .foregroundColor(.green)
             .font(.system(size: 30))
-            
         }
     }
 }

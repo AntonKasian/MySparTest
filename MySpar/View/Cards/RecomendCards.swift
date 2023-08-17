@@ -33,8 +33,8 @@ struct RecomendCards: View {
                             .padding(.bottom, 210)
                             .padding(.trailing, 60)
                     )
-            
-                    Spacer()
+                
+                Spacer()
                 
                 VStack(alignment: .leading) {
                     Image("cheese")
@@ -70,11 +70,9 @@ struct RecomendCards: View {
                                     .foregroundColor(.green)
                                 Image(systemName: "basket.fill")
                                     .foregroundColor(.white)
-                                    
                             }
                             .padding(.leading)
                         }
-
                     }
                     .padding(.top)
                 }

@@ -9,17 +9,16 @@ import SwiftUI
 
 struct DiscountCards: View {
     var body: some View {
-            Button {
-                print("Discount pressed")
-            } label: {
-                // К сожалению я не смог найти картинку нужных размеров
-                Image("DiscountImage")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 330, height: 170)
-                    .cornerRadius(20)
-            }
-        
+        Button {
+            print("Discount pressed")
+        } label: {
+            // К сожалению я не смог найти картинку нужных размеров
+            Image("DiscountImage")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 330, height: 170)
+                .cornerRadius(20)
+        }
     }
 }
 

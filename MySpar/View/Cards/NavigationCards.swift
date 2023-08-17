@@ -10,7 +10,7 @@ import SwiftUI
 struct NavigationCards: View {
     
     var title: String
-    
+    var color = #colorLiteral(red: 0.6095636487, green: 0.9260357022, blue: 0.9086622596, alpha: 1)
     var body: some View {
         Button {
             print("Navigation pressed")
@@ -18,7 +18,7 @@ struct NavigationCards: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .frame(width: 130, height: 150)
-                    .foregroundColor(Color(.systemGray5))
+                    .foregroundColor(Color(color))
                 
                 VStack(alignment: .leading) {
                     Text(title)
