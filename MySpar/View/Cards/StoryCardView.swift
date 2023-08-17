@@ -10,6 +10,7 @@ import SwiftUI
 struct StoryCardView: View {
     
     var title: String
+    @State private var isAnimating = false
     
     var body: some View {
         
@@ -19,11 +20,22 @@ struct StoryCardView: View {
                     .frame(width: 70, height: 70)
                     .foregroundColor(Color(.white))
                     .overlay(
-                        Circle()
-                            .stroke(Color.green, lineWidth: 2)
+                        ZStack {
+                            Circle()
+                                .stroke(Color.green, lineWidth: 2)
+                            Circle()
+                                .trim(from: 0, to: isAnimating ? 1 : 0)
+                                .stroke(Color.gray, lineWidth: 2)
+                                .frame(width: 70, height: 70)
+                                .rotationEffect(.degrees(-90))
+                                .animation(.easeInOut(duration: 1.0))
+                        }
                     )
                 Button {
                     print("Stories pressed")
+                    withAnimation {
+                        isAnimating.toggle()
+                    }
                 } label: {
                     Image("pine")
                         .resizable()
@@ -39,9 +51,6 @@ struct StoryCardView: View {
         
     }
 }
-
-
-
 
 struct StoryCardView_Previews: PreviewProvider {
     static var previews: some View {

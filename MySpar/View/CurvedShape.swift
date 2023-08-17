@@ -21,8 +21,8 @@ struct CurvedShape: View {
                 let width = geometry.size.width
                 let height = geometry.size.height
                 
-                let topRight = min(min(self.topRightRadius, height/2), width/2)
                 let topLeft = min(min(self.topLeftRadius, height), width/2)
+                let topRight = min(min(self.topRightRadius, height/2), width/2)
                 let bottomLeft = min(min(self.bottomLeftRadius, height/2), width/2)
                 let bottomRight = min(min(self.bottomRightRadius, height/2), width/2)
                 

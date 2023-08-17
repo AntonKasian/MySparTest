@@ -9,23 +9,9 @@ import SwiftUI
 
 struct MainView: View {
     
+    @ObservedObject var viewModel = MainViewModel()
+    
     @State var searchText = ""
-    
-    let storiesTitles = [
-            "Привелегии «Мой SPAR»",
-            "Мы в соцсетях",
-            "Дегустация в SPAR",
-            "3 рецепта коктейлей",
-            "Новинки недели"
-        ]
-    
-    let navigationTitles = [
-        "Абонемент на кофе",
-        "Мои скидки",
-        "Карта в подарок",
-        "Доставка за один час",
-        "Бесплатная доставка"
-    ]
     
     var body: some View {
         VStack {
@@ -35,7 +21,7 @@ struct MainView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
-                        ForEach(storiesTitles, id: \.self) {title in
+                        ForEach(viewModel.storiesTitles, id: \.self) {title in
                             StoryCardView(title: title)
                         }
                     }
@@ -56,7 +42,7 @@ struct MainView: View {
                     .padding(.bottom, 10)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
-                        ForEach(navigationTitles, id: \.self) {title in
+                        ForEach(viewModel.navigationTitles, id: \.self) {title in
                             NavigationCards(title: title)
                         }
                     }
@@ -104,12 +90,20 @@ struct MainView: View {
             ZStack(alignment: .leading) {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.gray, lineWidth: 1)
-                HStack {
-                    Image("pin")
-                        .resizable()
-                        .frame(width: 20, height: 20)
-                        .padding(.leading, 10)
-                    TextField("Москва, Москва и Московская область", text: $searchText)
+                HStack(spacing: 0) {
+                    Button {
+                        print("Pin tapped")
+                    } label: {
+                        Image("pin")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .padding(.leading, 10)
+                    }
+                    
+                    // Тут я не совсем понял, должен ли тут быть Text или TextField
+                    
+                    // TextField("Москва, Москва и Московская область", text: $searchText)
+                    Text("Москва, Москва и Московская область")
                         .font(.system(size: 14))
                         .foregroundColor(.black)
                         .padding(.vertical, 10)
